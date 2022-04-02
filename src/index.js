@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import { createStore } from './redux'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const addBtn = document.getElementById('add')
+const delBtn = document.getElementById('del')
+const countValue = document.getElementById('count-value')
+const store = createStore(reducer)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+addBtn.addEventListener('click', () => {
+  store.dispatch({ type: 'add' })
+})
+
+delBtn.addEventListener('click', () => {
+  store.dispatch({ type: 'del' })
+})
+
+function reducer(state = { count: 0 }, action) {
+  switch (action.type) {
+    case 'add':
+      return { count: state.count + 1 }
+    case 'del':
+      return { count: state.count - 1 }
+    default:
+      return state
+  }
+}
+
+function render() {
+  countValue.innerText = store.getState().count
+}
+
+store.subscribe(render)
+
+render()
