@@ -1,16 +1,6 @@
-import { createStore } from 'redux'
+import { createStore } from '../redux'
+import reducers from './reducers'
 
-function reducer(state = { count: 0 }, action) {
-  switch (action.type) {
-    case 'add':
-      return { count: state.count + 1 }
-    case 'del':
-      return { count: state.count - 1 }
-    default:
-      return state
-  }
-}
-
-const store = createStore(reducer)
+const store = createStore(reducers)
 
 export default store
