@@ -1,0 +1,11 @@
+import React from 'react'
+import { bindActionCreators } from '../../redux'
+import ReactReduxContext from '../ReactReduxContext'
+
+function useBoundDispatch(actions) {
+  const { store } = React.useContext(ReactReduxContext)
+  const boundActions = bindActionCreators(actions, store.dispatch)
+  return boundActions
+}
+
+export default useBoundDispatch

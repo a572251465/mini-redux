@@ -1,10 +1,10 @@
-import { Add, Del } from '../store/action-types'
+import { Add1, Del1 } from '../store/action-types'
 
 function addHandle() {
-  return { type: Add }
+  return { type: Add1 }
 }
 function delHandle() {
-  return { type: Del }
+  return { type: Del1 }
 }
 
 const actions = {

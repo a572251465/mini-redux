@@ -1,30 +1,26 @@
 import React from 'react'
-import store from '../store'
-import { addHandle, delHandle } from './action'
-import { bindActionCreators } from '../redux'
+import actions from './action'
+import { connect } from '../react-redux'
 
-function Counter() {
-  const { dispatch } = store
-  const [state, setState] = React.useState(store.getState().counter)
+class Counter extends React.Component {
+  constructor(props) {
+    super(props)
+    this.props = props
+  }
+  render() {
+    const { count, add, del } = this.props
 
-  const boundActions = bindActionCreators(
-    { add: addHandle, del: delHandle },
-    dispatch
-  )
-
-  React.useEffect(() => {
-    return store.subscribe(() => {
-      setState(store.getState().counter)
-    })
-  }, [])
-
-  return (
-    <div>
-      <h1>{state.count}</h1>
-      <button onClick={boundActions.add}>+</button>
-      <button onClick={boundActions.del}>-</button>
-    </div>
-  )
+    return (
+      <div>
+        <h1>{count}</h1>
+        <button onClick={() => add()}>+</button>
+        <button onClick={() => del()}>-</button>
+      </div>
+    )
+  }
 }
 
-export default Counter
+const stateToPropsHandle = (state) => state.counter
+export default connect(stateToPropsHandle, { add: actions.addHandle, del: actions.delHandle })(
+  Counter
+)
