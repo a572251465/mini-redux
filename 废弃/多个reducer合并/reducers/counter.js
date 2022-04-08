@@ -1,6 +1,6 @@
-import { Add, Del } from '../actions-type'
+import { Add, Del } from '../action-types'
 
-function counterReducer(state = { count: 0 }, action) {
+function reducer(state = { count: 0 }, action) {
   switch (action.type) {
     case Add:
       return { count: state.count + 1 }
@@ -11,4 +11,4 @@ function counterReducer(state = { count: 0 }, action) {
   }
 }
 
-export default counterReducer
+export default reducer
