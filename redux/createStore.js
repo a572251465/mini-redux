@@ -72,13 +72,12 @@ export function createStore(reducer, preloadedState) {
     return action;
   }
 
-  // 初期化执行
+  // 初期化执行/ 第一次执行的话 可以拿到初期化的state（假如没有初期值的话）
   dispatch({ type: ActionTypes.INIT });
   // 定义 store 集合
-  const store = {
+  return {
     dispatch,
     subscribe,
     getState,
   };
-  return store;
 }
