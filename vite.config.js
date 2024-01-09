@@ -12,6 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       redux: resolvePath("./redux"),
+      "@": resolvePath("./src"),
     },
   },
 });

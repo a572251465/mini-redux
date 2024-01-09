@@ -3,7 +3,8 @@
     "baseUrl": "./",
     "moduleResolution": "node",
     "paths": {
-      "redux/*": ["redux/*"]
+      "redux/*": ["redux/*"],
+      "@/*": ["src/*"]
     }
   }
 }

@@ -7,4 +7,5 @@
 
 - [x] 完成基本的 【createStore】
 - [x] 完成 action 合并方法【bindActionCreators】
-- [ ] 实现多个 Store 合并
+- [x] 实现多个 Store 合并【combineReducers】
+- [ ] 实现 react-redux
