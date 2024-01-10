@@ -1,8 +1,9 @@
 import { createStore } from "redux/createStore.js";
-import reducer from "./reducers";
+import reducers from "@/store/reducers/index.js";
 
-const store = createStore(reducer, {
-  counter1: { number: 0 },
-  counter2: { number: 0 },
+const store = createStore(reducers, {
+  counter1: { number: 1 },
+  counter2: { number: 1 },
 });
+
 export default store;

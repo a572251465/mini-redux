@@ -1,8 +1,9 @@
-import counter1 from "./counter1";
-import counter2 from "./counter2";
 import combineReducers from "redux/combineReducers.js";
-let rootReducer = combineReducers({
-  counter1,
-  counter2,
+
+import counter1Reducer from "./counter1";
+import counter2Reducer from "./counter2";
+
+export default combineReducers({
+  counter1: counter1Reducer,
+  counter2: counter2Reducer,
 });
-export default rootReducer;

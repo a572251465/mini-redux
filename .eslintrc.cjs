@@ -16,6 +16,8 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
+    "react/prop-types": "off",
+    "react/display-name": "off",
   },
   globals: {
     __dirname: "readonly",

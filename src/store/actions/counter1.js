@@ -1,11 +1,10 @@
-import * as types from "@/store/action-types.js";
+import { Types } from "@/store/action-types.js";
 
-const actions = {
+export const actions = {
   add1() {
-    return { type: types.ADD1 };
+    return { type: Types.ADD1 };
   },
   minus1() {
-    return { type: types.MINUS1 };
+    return { type: Types.MINUS1 };
   },
 };
-export default actions;

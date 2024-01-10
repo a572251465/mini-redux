@@ -1,6 +1,6 @@
 import { Types } from "@/store/action-types.js";
 
-export const actions = {
+const actions = {
   add2() {
     return { type: Types.ADD2 };
   },
@@ -8,3 +8,4 @@ export const actions = {
     return { type: Types.MINUS2 };
   },
 };
+export default actions;

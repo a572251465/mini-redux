@@ -13,6 +13,7 @@ export default defineConfig({
     alias: {
       redux: resolvePath("./redux"),
       "@": resolvePath("./src"),
+      "react-redux": resolvePath("./react-redux"),
     },
   },
 });
