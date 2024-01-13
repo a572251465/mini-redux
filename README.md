@@ -24,4 +24,4 @@
 
 ### `redux-saga` 第一次执行过程
 
-![redux-saga 初步执行过程.png](images%2Fredux-saga%20%B3%F5%B2%BD%D6%B4%D0%D0%B9%FD%B3%CC.png)
+![redux-saga-on-mount.png](images%2Fredux-saga-on-mount.png)
