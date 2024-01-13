@@ -14,6 +14,7 @@ export default defineConfig({
       redux: resolvePath("./redux"),
       "@": resolvePath("./src"),
       "react-redux": resolvePath("./react-redux"),
+      "redux-saga": resolvePath("./redux-saga"),
     },
   },
 });

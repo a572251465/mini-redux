@@ -10,7 +10,9 @@ const Counter1Comp = function Counter1() {
       <h1>这是 counter1</h1>
       <span>{state.number}</span>
       <button onClick={boundActions.add1}> -- add -- </button>
-      <button onClick={boundActions.minus1}> -- minus --</button>
+      <button onClick={boundActions.thunkAdd1}> -- thunkAdd1 -- </button>
+      <button onClick={boundActions.promiseAdd1}> -- promiseAdd1 -- </button>
+      <button onClick={boundActions.promiseAdd2}> -- promiseAdd2 -- </button>
     </div>
   );
 };

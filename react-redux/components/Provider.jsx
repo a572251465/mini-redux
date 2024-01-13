@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactReduxContext } from "react-redux/components/Context.js";
 
 /**

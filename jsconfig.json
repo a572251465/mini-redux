@@ -5,7 +5,8 @@
     "paths": {
       "redux/*": ["redux/*"],
       "@/*": ["src/*"],
-      "react-redux/*": ["react-redux/*"]
+      "react-redux/*": ["react-redux/*"],
+      "redux-saga/*": ["redux-saga/*"]
     }
   }
 }
